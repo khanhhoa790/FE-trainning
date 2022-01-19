@@ -1,0 +1,141 @@
+:root {
+  --primary-color: #2f65c2;
+  --secondary-color: #081843;
+  --third-color: #de4141;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 29px;
+}
+
+.menu {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0 60px;
+}
+
+.menu-link {
+  color: var(--secondary-color);
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  line-height: calc(23 / 16);
+}
+
+.menu-item {
+  margin-top: 27px;
+  position: relative;
+}
+
+.menu-item::after {
+  display: block;
+  content: "";
+  /* width: 80px; */
+  height: 5px;
+  margin-top: 25px;
+  /* border-bottom: solid 4px var(--primary-color); */
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  /* padding-bottom: 25px; */
+  /* margin-bottom: 25px; */
+}
+
+.menu-item:hover:after {
+  transform: scaleX(1);
+}
+
+.menu-link:hover {
+  color: var(--primary-color);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  margin-top: 30px;
+  transform: translateX(-35px);
+}
+.submenu-item {
+  /* padding: 20px 80px 20px 20px; */
+  width: 205px;
+  height: 55px;
+  line-height: 55px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 3px #8a8a8a;
+}
+
+.submenu-link {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #000000;
+  padding-left: 35px;
+}
+
+.submenu-item:hover {
+  background: rgba(47, 101, 194, 0.2);
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+@keyframes menu-moveup {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    /* transform: translateX(-35px); */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    transform: translateX(-35px);
+  }
+}
+.menu-item:hover > .submenu {
+  animation: menu-moveup 0.4s ease-in-out;
+}
+
+.header-language {
+  margin-left: 42px;
+  display: flex;
+  align-items: center;
+  /* border-left: solid 1px #c3c3c3; */
+  font-family: "Noto Sans JP", sans-serif;
+  padding: 0 32px;
+  position: relative;
+}
+
+.vertical-line {
+  border-left: solid 1px #c3c3c3;
+  height: 30px;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+}
+
+.language-link {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #081843;
+}
