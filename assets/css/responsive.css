@@ -1,0 +1,106 @@
+/* PC */
+
+@media only screen and (min-width: 1024px) {
+  /* Styles */
+  .menu-hamburger .menu-hamburger-icon {
+    display: none;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+
+  .header-container {
+    /* display: none; */
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    transition: top 1s ease;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .header-logo {
+    position: relative;
+    left: 50%;
+    /* transform: translateX(-50%); */
+  }
+
+  .menu-hamburger .menu-hamburger-icon {
+    font-size: 28px;
+    padding: 5px;
+  }
+
+  .menu-hamburger:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  .openMenu {
+    display: block;
+  }
+
+  /* banner */
+  .banner {
+    object-fit: cover;
+  }
+
+  .banner .banner-content {
+    left: 0;
+    right: 0;
+    display: block;
+    max-width: unset;
+    text-align: center;
+  }
+
+  /* About */
+  .about-content {
+    flex-direction: column-reverse;
+  }
+
+  .about-content .col-half {
+    width: 100%;
+  }
+
+  .about-content img {
+    margin-top: 24px;
+  }
+
+  .about-heading {
+    text-align: center;
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .header-logo {
+    position: relative;
+    left: 50%;
+    /* transform: translateX(-50%); */
+  }
+
+  .menu-hamburger .menu-hamburger-icon {
+    font-size: 28px;
+  }
+}

@@ -15,11 +15,13 @@ body {
 
 .wrapper {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -46,6 +48,11 @@ body {
   display: flex;
   align-items: center;
   gap: 0 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .menu-link {
@@ -132,7 +139,7 @@ body {
   align-items: center;
   /* border-left: solid 1px #c3c3c3; */
   font-family: "Noto Sans JP", sans-serif;
-  padding: 0 32px;
+  padding-left: 32px;
   position: relative;
 }
 
@@ -397,7 +404,6 @@ body {
   font-weight: bold;
   line-height: 150%;
   text-align: center;
-  width: 818px;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   color: var(--secondary-color);
