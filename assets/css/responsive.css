@@ -12,7 +12,7 @@
   /* Styles */
 
   .header-container {
-    /* display: none; */
+    display: block;
     justify-content: space-between;
   }
 
@@ -23,6 +23,18 @@
     align-items: center;
     background-color: #ffffff;
     transition: top 1s ease;
+    position: absolute;
+    top: 100px;
+    left: -20px;
+    width: calc(100%);
+  }
+
+  .menu-active {
+    display: block;
+  }
+
+  .menu .menu-item {
+    margin-left: 60px;
   }
 
   .vertical-line {
@@ -38,15 +50,8 @@
   .menu-hamburger .menu-hamburger-icon {
     font-size: 28px;
     padding: 5px;
-  }
-
-  .menu-hamburger:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-  }
-
-  .openMenu {
-    display: block;
+    position: absolute;
+    top: 20px;
   }
 
   /* banner */
@@ -87,7 +92,7 @@
   }
 
   .menu {
-    display: none;
+    display: block;
   }
 
   .vertical-line {
